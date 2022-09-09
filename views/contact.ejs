@@ -1,0 +1,28 @@
+
+        <h1>Contact Page</h1>
+            <table class="table table-secondary">
+                <thead class="table-danger">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                    </tr>
+                </thead>
+                <% if (cont.length < 1) { %>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Contact is empty</td>
+                        <td>Contact is empty</td>
+                    </tr>
+                </tbody>
+                <% } else { %> <% cont.forEach((c, i) => { %>
+                <tbody>
+                    <tr>
+                        <th scope="row"><%= i + 1 %></th>
+                        <td><%= c.name %></td>
+                        <td><%= c.email %></td>
+                    </tr>
+                </tbody>
+                <% }) %> <% } %>
+            </table>
